@@ -1,5 +1,14 @@
 # amqps://slmvvoul:vJY_aB1QvNKnC49E0XrKHlgIM_DUvWEY@beaver.rmq.cloudamqp.com/slmvvoul
+
+
+import json
 import pika
+
+import os
+import django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "admin.settings")
+django.setup()
+from products.models import Product
 
 params = pika.URLParameters(
     'amqps://slmvvoul:vJY_aB1QvNKnC49E0XrKHlgIM_DUvWEY@beaver.rmq.cloudamqp.com/slmvvoul')
@@ -13,7 +22,12 @@ channel.queue_declare(queue='admin')
 
 def callback(ch, method, properties, body):
     print('Received in admin')
-    print(body)
+    id = json.loads(body)
+    print(id)
+    product = Product.objects.get(id=id)
+    product.likes = product.likes + 1
+    product.save()
+    print('Product likes increased')
 
 
 channel.basic_consume(
