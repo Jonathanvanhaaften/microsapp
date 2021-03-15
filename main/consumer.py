@@ -24,17 +24,20 @@ def callback(ch, method, properties, body):
             id=data['id'], title=data['title'], image=data['image'])
         db.session.add(product)
         db.session.commit()
+        print('Product Created')
 
     elif properties.content_type == 'product_updated':
         product = Product.query.get(data['id'])
         product.title = data['title']
         product.image = data['image']
         db.session.commit()
+        print('Product Updated')
 
     elif properties.content_type == 'product_deleted':
         product = Product.query.get(data)
         db.session.delete(product)
         db.session.commit()
+        print('Product Deleted')
 
 
 channel.basic_consume(
