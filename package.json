@@ -1,0 +1,35 @@
+{
+  "name": "microsapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./admin/frontend/src/index.js --output-path ./admin/frontend/static/frontend/",
+    "build": "webpack --mode production ./admin/frontend/src/index.js --output ./admin/frontend/static/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathanvanhaaften/microsapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathanvanhaaften/microsapp/issues"
+  },
+  "homepage": "https://github.com/Jonathanvanhaaften/microsapp#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^5.26.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
