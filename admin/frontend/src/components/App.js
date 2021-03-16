@@ -13,8 +13,8 @@ import ReactDom from 'react-dom';
 // import Register from './accounts/Register';
 // import PrivateRoute from './common/PrivateRoute';
 
-// import { Provider } from 'react-redux';
-// import store from '../store';
+import { Provider } from 'react-redux';
+import store from '../store';
 // import { loadUser } from '../actions/auth';
 
 
@@ -28,7 +28,11 @@ class App extends Component {
     //     store.dispatch(loadUser());
     // }
     render() {
-        return <h1>React App</h1>
+        return (
+            <Provider store={store}>
+                <h1>React App</h1>
+            </Provider>
+        )
     }
 };
 
