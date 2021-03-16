@@ -103,6 +103,16 @@ module.exports = {
           loader: "babel-loader"
         }
       }, {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            }
+          }
+        ]
+      }, {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
@@ -121,4 +131,4 @@ module.exports = {
     //   filename: "./index.html"
     // }),
   ]
-};
+}

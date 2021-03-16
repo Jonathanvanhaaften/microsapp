@@ -7,6 +7,7 @@ import '../index.css';
 // import { Provider as AlertProvider } from 'react-alert';
 // import AlertTemplate from 'react-alert-template-basic';
 
+import Nav from './layout/Nav'
 // import Header from './layout/header';
 // import Dashboard from './leads/Dashboard';
 // import Alerts from './layout/Alerts';
@@ -16,6 +17,7 @@ import '../index.css';
 
 import { Provider } from 'react-redux';
 import store from '../store';
+
 // import { loadUser } from '../actions/auth';
 
 
@@ -31,6 +33,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
+                <Nav />
                 <h1 className="text-sm">React App</h1>
             </Provider>
         )
