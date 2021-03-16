@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ReactDom from 'react-dom';
+import '../index.css';
 // import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
 
 
@@ -30,7 +31,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                <h1>React App</h1>
+                <h1 className="text-sm">React App</h1>
             </Provider>
         )
     }
