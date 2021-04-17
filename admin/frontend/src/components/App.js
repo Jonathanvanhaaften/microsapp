@@ -17,6 +17,7 @@ import Nav from './layout/Nav'
 
 import { Provider } from 'react-redux';
 import store from '../store';
+import Dashboard from './Main/Dashboard';
 
 // import { loadUser } from '../actions/auth';
 
@@ -34,6 +35,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <Nav />
+                <Dashboard />
                 <h1 className="text-sm">React App</h1>
             </Provider>
         )

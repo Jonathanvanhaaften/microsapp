@@ -6,7 +6,7 @@ export class Nav extends Component {
     render() {
         return (
             <Fragment>
-                <div>
+                <div className="sticky top-0">
                     <nav className="flex justify-between bg-gray-900 text-white max-h-10">
 
                         <div>
