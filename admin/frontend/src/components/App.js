@@ -9,7 +9,7 @@ import '../index.css';
 
 import Nav from './layout/Nav'
 // import Header from './layout/header';
-// import Dashboard from './leads/Dashboard';
+import Dashboard from './Main/Dashboard';
 // import Alerts from './layout/Alerts';
 // import Login from './accounts/Login';
 // import Register from './accounts/Register';
@@ -17,6 +17,7 @@ import Nav from './layout/Nav'
 
 import { Provider } from 'react-redux';
 import store from '../store';
+import Landing from './Main/Landing';
 
 // import { loadUser } from '../actions/auth';
 
@@ -34,7 +35,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <Nav />
-                <h1 className="text-sm">React App</h1>
+                <Dashboard />
             </Provider>
         )
     }
