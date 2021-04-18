@@ -18,6 +18,7 @@ import Nav from './layout/Nav'
 import { Provider } from 'react-redux';
 import store from '../store';
 import Dashboard from './Main/Dashboard';
+import Productpage from './Main/Productpage';
 
 // import { loadUser } from '../actions/auth';
 
@@ -36,7 +37,8 @@ class App extends Component {
             <Provider store={store}>
                 <Nav />
                 <Dashboard />
-                <h1 className="text-sm">React App</h1>
+               <Productpage />
+                <h1 className="text-sm">TEST React App</h1>
             </Provider>
         )
     }
