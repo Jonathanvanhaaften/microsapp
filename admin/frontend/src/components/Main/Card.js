@@ -1,17 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
+import carp from '../images/carpaccio.JPG'
 
-export default class cardtemp extends Component {
-    render() {
-        return (
-            <div>
-    <div className="bg-white border rounded-lg overflow-hidden ">
-        <div className="p-6">
-        <img></img>
-        </div>
-    </div>
-
-    <div className="max-w-sm rounded overflowhidden shadow-lg">
-        <img src="" alt="" className="w-full"/>
+const card = () => {
+    return (
+        <div>
+           
+ <div className="max-w-sm rounded-xl overflowhidden shadow-lg">
+        <img src={carp} alt="" className="rounded-sm w-full"/>
                <div className="px-6 py-4">
                    <div className="font-bold text-purple-500 text-xl mb-2">
                        Text here
@@ -50,23 +45,9 @@ export default class cardtemp extends Component {
                </div>
     </div>
 
-
-
-
-            </div>
-        )
-    }
+ 
+        </div>
+    )
 }
 
-// <div className="flex">
-// <div className="bg-indigo-400 rounded-xl shadow-md">
-//     <a href="#"className="h-2 w-2 object-cover"><img src ={carp} alt="http://goo.gl/ijai22"/></a>
-
-// </div>
-// <div className="bg-indigo-400 rounded-xl shadow-md">
-//     <a href="#"className="h-full w-25 object-cover"><img src ="not-found.png" alt="http://goo.gl/ijai22"/></a>
-// </div>
-// <div className="bg-indigo-400 rounded-xl shadow-md">
-//     <a href="#"className="h-full w-25 object cover"><img src ="not-found.png" alt="http://goo.gl/ijai22"/></a>
-// </div>
-// </div>
+export default card;
